@@ -19,6 +19,12 @@ require([
         if (thing.x > window.innerWidth - 20 || thing.x < 0) {
             thing.vx = thing.vx * -1;
         }
+        // Ceiling
+        if (thing.y < 10) {
+            thing.vx = 0;
+            thing.vy = 0;
+            thing.y = 10;
+        }
 
         return thing;
     };
